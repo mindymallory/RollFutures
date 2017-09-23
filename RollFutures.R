@@ -1,7 +1,9 @@
 install.packages("Quandl")
 install.packages("plyr")
+install.packages("tidyr")
 library(Quandl)
 library(plyr)
+library(tidyr)
 Quandl.api_key("otkcuWHb5hYFTXTsiMds")
 
 start <- 2015
@@ -15,7 +17,7 @@ k <- 1
 
 for (i in start:end){
   for (j in 1:5){
-    MyData = cbind(contracts[j], Quandl(paste0("CME/C", contracts[j], years[i-start +1])))
+    MyData = cbind(Quandl(paste0("CME/C", contracts[j], years[i-start +1])), paste0(contracts[j], '-', years[i-start+1]))
     data[[k]] <- MyData
     k <- k+1
     # To keep raw data files uncomment this line. 
@@ -24,10 +26,8 @@ for (i in start:end){
 }
 
 DATA <- ldply(data, rbind)
-DATA <- DATA[, c(1,2,8,9)]
-colnames(DATA) <- c('Contract', 'Date', 'Settle', 'Volume')
+DATA <- DATA[, c(1,7,8,10)]
+colnames(DATA) <- c('Date', 'Settle', 'Volume', 'Contract')
 
-# playing from here. 
-DATA$Contract <- as.character(DATA$Contract)
-filter(DATA, DATA$Contract == 'Z')
-class(DATA)
+DATA <- gather(DATA, Observation, Value, Settle:Contract)
+DATA <- spread(DATA, Observation, Value)
