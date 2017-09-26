@@ -6,7 +6,7 @@ library(Quandl)
 library(plyr)
 library(tidyr)
 library(ggplot2)
-Quandl.api_key("otkcuWHb5hYFTXTsiMds")
+Quandl.api_key("YourAPIKeyHERE")
 
 start <- 2011
 end <- 2017
