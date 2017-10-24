@@ -6,16 +6,23 @@ library(Quandl)
 library(plyr)
 library(tidyr)
 library(ggplot2)
-Quandl.api_key("YourAPIKeyHERE")
+Quandl.api_key("YourAPIKeyHere")
 
 start <- 2011
 end <- 2017
-c_code <- 2
-commodity_code <- c("C", "S", "W", "KW", "CL")
+c_code <- 7
+commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM")
 # #C
 # contracts <- c('H', 'K', 'N', 'U', 'Z')
-#S
-contracts <- c( 'F', 'H', 'K', 'N', 'Q', 'U', 'X')
+# #S
+# contracts <- c( 'F', 'H', 'K', 'N', 'Q', 'U', 'X')
+
+# #BO
+# contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')  # For meal and oil I made a decision to skip V and get Z to match crush production
+#                                                      # (can't sell SO and SM before you buy the soybeans). 
+#SM
+contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')
+
 # #W
 # contracts <- c( 'H', 'K', 'N', 'U', 'Z')
 # #KW
@@ -65,3 +72,7 @@ DATA$Nearby <- nearby
 g <- autoplot(DATA$Nearby)
 g
 
+
+# 
+# DATA_Export <- cbind(DATA_Export, DATA$Nearby)
+# write.zoo(DATA_Export, file = "P://Github-Repos/PriceAnalysis/excel-files/soy-crush.csv",row.names=FALSE, na="",col.names=FALSE, sep=",")
