@@ -6,20 +6,21 @@ library(Quandl)
 library(plyr)
 library(tidyr)
 library(ggplot2)
-Quandl.api_key("YourAPIKeyHere")
+Quandl.api_key("otkcuWHb5hYFTXTsiMds")
 
-start <- 2011
+start <- 2017
 end <- 2017
 c_code <- 7
 commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM")
 # #C
 # contracts <- c('H', 'K', 'N', 'U', 'Z')
+
 # #S
 # contracts <- c( 'F', 'H', 'K', 'N', 'Q', 'U', 'X')
 
 # #BO
 # contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')  # For meal and oil I made a decision to skip V and get Z to match crush production
-#                                                      # (can't sell SO and SM before you buy the soybeans). 
+                                                    #(can't sell SO and SM before you buy the soybeans).
 #SM
 contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')
 
@@ -72,7 +73,14 @@ DATA$Nearby <- nearby
 g <- autoplot(DATA$Nearby)
 g
 
+DATA_Export_SM <- DATA
 
-# 
-# DATA_Export <- cbind(DATA_Export, DATA$Nearby)
-# write.zoo(DATA_Export, file = "P://Github-Repos/PriceAnalysis/excel-files/soy-crush.csv",row.names=FALSE, na="",col.names=FALSE, sep=",")
+DATA_Export_S <- DATA_Export_S["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "X.2017.Settle")]
+DATA_Export_SM <- DATA_Export_SM["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "Z.2017.Settle")]
+DATA_Export_BO <- DATA_Export_BO["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "Z.2017.Settle")]
+
+DATA_Export <- merge(DATA_Export_S, DATA_Export_SM, DATA_Export_BO)
+
+colnames(DATA_Export) = c("AugBeans", "SepBeans", "NovBeans", "AugMeal", "SepMeal", "DecMeal", "AugOil", "SepOil", "DecOil")
+
+write.zoo(DATA_Export, file = "P://Github-Repos/PriceAnalysis/excel-files/soy-crush-exercise.csv",row.names=FALSE, na="",col.names=TRUE, sep=",")
