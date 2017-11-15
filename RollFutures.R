@@ -8,10 +8,10 @@ library(tidyr)
 library(ggplot2)
 Quandl.api_key("otkcuWHb5hYFTXTsiMds")
 
-start <- 2017
+start <- 2010
 end <- 2017
-c_code <- 7
-commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM")
+c_code <- 8
+commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM", "LN")
 # #C
 # contracts <- c('H', 'K', 'N', 'U', 'Z')
 
@@ -21,8 +21,8 @@ commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM")
 # #BO
 # contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')  # For meal and oil I made a decision to skip V and get Z to match crush production
                                                     #(can't sell SO and SM before you buy the soybeans).
-#SM
-contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')
+##SM
+#contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')
 
 # #W
 # contracts <- c( 'H', 'K', 'N', 'U', 'Z')
@@ -31,6 +31,8 @@ contracts <- c('F', 'H', 'K', 'N', 'Q', 'U', 'Z')
 # #CL
 # contracts <- c( 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z')
 
+# LH
+contracts <- c('G', 'J', 'K', 'M', 'N', 'Q', 'V', 'Z')
 
 years <- seq(start, end, by =1)
 data <- list()
@@ -73,14 +75,11 @@ DATA$Nearby <- nearby
 g <- autoplot(DATA$Nearby)
 g
 
-DATA_Export_SM <- DATA
+# DATA_Export_S <- DATA$Nearby
+# 
+# 
+# DATA_Export <- merge(DATA_Export_S, DATA_Export_SM, DATA_Export_BO)
+# 
+# colnames(DATA_Export) = c("Beans", "Meal", "Oil")
 
-DATA_Export_S <- DATA_Export_S["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "X.2017.Settle")]
-DATA_Export_SM <- DATA_Export_SM["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "Z.2017.Settle")]
-DATA_Export_BO <- DATA_Export_BO["2017-7/2017-11", c("Q.2017.Settle", "U.2017.Settle", "Z.2017.Settle")]
-
-DATA_Export <- merge(DATA_Export_S, DATA_Export_SM, DATA_Export_BO)
-
-colnames(DATA_Export) = c("AugBeans", "SepBeans", "NovBeans", "AugMeal", "SepMeal", "DecMeal", "AugOil", "SepOil", "DecOil")
-
-write.zoo(DATA_Export, file = "P://Github-Repos/PriceAnalysis/excel-files/soy-crush-exercise.csv",row.names=FALSE, na="",col.names=TRUE, sep=",")
+write.zoo(DATA$Nearby, file = "P:/Github-Repos/PriceAnalysis/Excel-files/LeanHogs.csv", row.names=FALSE, na="",col.names=TRUE, sep=",")
