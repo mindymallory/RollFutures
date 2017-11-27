@@ -6,12 +6,12 @@ library(Quandl)
 library(plyr)
 library(tidyr)
 library(ggplot2)
-Quandl.api_key("YourAPIKeyHERE")
+Quandl.api_key("YourAPIKeyHere")
 
 start <- 2010
 end <- 2017
-c_code <- 8
-commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM", "LN")
+c_code <- 7
+commodity_code <- c("C", "S", "W", "KW", "CL", "HO", "RB", "BO", "SM", "LN")
 # #C
 # contracts <- c('H', 'K', 'N', 'U', 'Z')
 
@@ -28,11 +28,12 @@ commodity_code <- c("C", "S", "W", "KW", "CL", "BO", "SM", "LN")
 # contracts <- c( 'H', 'K', 'N', 'U', 'Z')
 # #KW
 # contracts <- c( 'H', 'K', 'N', 'U', 'Z')
-# #CL
-# contracts <- c( 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z')
 
-# LH
-contracts <- c('G', 'J', 'K', 'M', 'N', 'Q', 'V', 'Z')
+#CL
+contracts <- c( 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z')
+
+# # LH
+# contracts <- c('G', 'J', 'K', 'M', 'N', 'Q', 'V', 'Z')
 
 years <- seq(start, end, by =1)
 data <- list()
@@ -75,11 +76,11 @@ DATA$Nearby <- nearby
 g <- autoplot(DATA$Nearby)
 g
 
-# DATA_Export_S <- DATA$Nearby
-# 
-# 
-# DATA_Export <- merge(DATA_Export_S, DATA_Export_SM, DATA_Export_BO)
-# 
-# colnames(DATA_Export) = c("Beans", "Meal", "Oil")
+ DATA_Export_RB <- DATA$Nearby
+ 
+ 
+DATA_Export <- merge(DATA_Export_CL, DATA_Export_HO, DATA_Export_RB)
+ 
+colnames(DATA_Export) = c("CrudeOil", "ULSD", "RBOB")
 
-write.zoo(DATA$Nearby, file = "P:/Github-Repos/PriceAnalysis/Excel-files/LeanHogs.csv", row.names=FALSE, na="",col.names=TRUE, sep=",")
+write.zoo(DATA_Export, file = "P:/Github-Repos/PriceAnalysis/Excel-files/CrackSpread.csv", row.names=FALSE, na="",col.names=TRUE, sep=",")
