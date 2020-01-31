@@ -1,0 +1,393 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. *Regressions
+. 
+. regress stocks_petroleum_us spec_var_1 ip  trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      60
+                                                       {txt}F(  3,    56) ={res}  179.20
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8411
+                                                       {txt}Root MSE      = {res} .03526
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0546311{col 26}{space 2} .0298345{col 37}{space 1}    1.83{col 46}{space 3}0.072{col 54}{space 4}-.0051347{col 67}{space 3} .1143969
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.2328527{col 26}{space 2} .0736302{col 37}{space 1}   -3.16{col 46}{space 3}0.003{col 54}{space 4}-.3803517{col 67}{space 3}-.0853538
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .4488629{col 26}{space 2} .0278719{col 37}{space 1}   16.10{col 46}{space 3}0.000{col 54}{space 4} .3930287{col 67}{space 3}  .504697
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 7.772437{col 26}{space 2} .3240282{col 37}{space 1}   23.99{col 46}{space 3}0.000{col 54}{space 4}  7.12333{col 67}{space 3} 8.421543
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth    trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  3,    54) ={res}  117.02
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8607
+                                                       {txt}Root MSE      = {res}  .0334
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .1034832{col 26}{space 2} .0265163{col 37}{space 1}    3.90{col 46}{space 3}0.000{col 54}{space 4} .0503212{col 67}{space 3} .1566452
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .3200133{col 26}{space 2} .1280566{col 37}{space 1}    2.50{col 46}{space 3}0.016{col 54}{space 4} .0632754{col 67}{space 3} .5767513
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .4174487{col 26}{space 2} .0249817{col 37}{space 1}   16.71{col 46}{space 3}0.000{col 54}{space 4} .3673635{col 67}{space 3} .4675339
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 6.723073{col 26}{space 2}  .012241{col 37}{space 1}  549.23{col 46}{space 3}0.000{col 54}{space 4} 6.698531{col 67}{space 3} 6.747615
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1   ip_forecast trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      60
+                                                       {txt}F(  3,    56) ={res}  113.69
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8380
+                                                       {txt}Root MSE      = {res} .03561
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .1273394{col 26}{space 2} .0299451{col 37}{space 1}    4.25{col 46}{space 3}0.000{col 54}{space 4} .0673521{col 67}{space 3} .1873267
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .4617169{col 26}{space 2} .2432267{col 37}{space 1}    1.90{col 46}{space 3}0.063{col 54}{space 4}-.0255247{col 67}{space 3} .9489584
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .3747771{col 26}{space 2} .0214477{col 37}{space 1}   17.47{col 46}{space 3}0.000{col 54}{space 4} .3318121{col 67}{space 3} .4177421
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}   6.7356{col 26}{space 2}  .012185{col 37}{space 1}  552.78{col 46}{space 3}0.000{col 54}{space 4} 6.711191{col 67}{space 3}  6.76001
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth  ip_forecast trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  4,    53) ={res}   93.78
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8649
+                                                       {txt}Root MSE      = {res} .03321
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0836999{col 26}{space 2} .0269941{col 37}{space 1}    3.10{col 46}{space 3}0.003{col 54}{space 4} .0295566{col 67}{space 3} .1378433
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .5789293{col 26}{space 2} .1914201{col 37}{space 1}    3.02{col 46}{space 3}0.004{col 54}{space 4} .1949893{col 67}{space 3} .9628693
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2}-.5689495{col 26}{space 2} .3456372{col 37}{space 1}   -1.65{col 46}{space 3}0.106{col 54}{space 4} -1.26221{col 67}{space 3} .1243108
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .4365178{col 26}{space 2}  .025943{col 37}{space 1}   16.83{col 46}{space 3}0.000{col 54}{space 4} .3844826{col 67}{space 3} .4885529
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 6.724492{col 26}{space 2} .0125507{col 37}{space 1}  535.79{col 46}{space 3}0.000{col 54}{space 4} 6.699318{col 67}{space 3} 6.749665
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth ip trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  4,    53) ={res}  104.69
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8741
+                                                       {txt}Root MSE      = {res} .03205
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0642546{col 26}{space 2} .0242634{col 37}{space 1}    2.65{col 46}{space 3}0.011{col 54}{space 4} .0155884{col 67}{space 3} .1129208
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .3585726{col 26}{space 2} .1160501{col 37}{space 1}    3.09{col 46}{space 3}0.003{col 54}{space 4} .1258055{col 67}{space 3} .5913396
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.2296686{col 26}{space 2} .0790749{col 37}{space 1}   -2.90{col 46}{space 3}0.005{col 54}{space 4}-.3882727{col 67}{space 3}-.0710644
+{txt}{space 7}trend {c |}{col 14}{res}{space 2}  .493207{col 26}{space 2} .0362969{col 37}{space 1}   13.59{col 46}{space 3}0.000{col 54}{space 4} .4204046{col 67}{space 3} .5660094
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 7.736444{col 26}{space 2}  .348892{col 37}{space 1}   22.17{col 46}{space 3}0.000{col 54}{space 4} 7.036655{col 67}{space 3} 8.436233
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1 ip    ip_forecast trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      60
+                                                       {txt}F(  4,    55) ={res}  111.13
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8577
+                                                       {txt}Root MSE      = {res} .03367
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0784258{col 26}{space 2} .0267781{col 37}{space 1}    2.93{col 46}{space 3}0.005{col 54}{space 4} .0247613{col 67}{space 3} .1320903
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.2638053{col 26}{space 2} .0759367{col 37}{space 1}   -3.47{col 46}{space 3}0.001{col 54}{space 4}-.4159858{col 67}{space 3}-.1116249
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .5367162{col 26}{space 2}  .212757{col 37}{space 1}    2.52{col 46}{space 3}0.015{col 54}{space 4} .1103417{col 67}{space 3} .9630907
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .4657246{col 26}{space 2} .0337066{col 37}{space 1}   13.82{col 46}{space 3}0.000{col 54}{space 4}  .398175{col 67}{space 3} .5332742
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  7.89598{col 26}{space 2} .3322997{col 37}{space 1}   23.76{col 46}{space 3}0.000{col 54}{space 4} 7.230036{col 67}{space 3} 8.561923
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1 ip actual_ip_growth   ip_forecast trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  5,    52) ={res}   92.13
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8774
+                                                       {txt}Root MSE      = {res} .03193
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0475591{col 26}{space 2} .0252857{col 37}{space 1}    1.88{col 46}{space 3}0.066{col 54}{space 4}-.0031803{col 67}{space 3} .0982985
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.2231008{col 26}{space 2} .0808092{col 37}{space 1}   -2.76{col 46}{space 3}0.008{col 54}{space 4}-.3852563{col 67}{space 3}-.0609452
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .5906567{col 26}{space 2} .1834851{col 37}{space 1}    3.22{col 46}{space 3}0.002{col 54}{space 4}  .222467{col 67}{space 3} .9588464
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2}-.5124116{col 26}{space 2} .3418065{col 37}{space 1}   -1.50{col 46}{space 3}0.140{col 54}{space 4}-1.198297{col 67}{space 3} .1734733
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .5082147{col 26}{space 2} .0346514{col 37}{space 1}   14.67{col 46}{space 3}0.000{col 54}{space 4} .4386816{col 67}{space 3} .5777478
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 7.708743{col 26}{space 2} .3565502{col 37}{space 1}   21.62{col 46}{space 3}0.000{col 54}{space 4} 6.993272{col 67}{space 3} 8.424213
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1 ip stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  4,    53) ={res}  218.79
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9413
+                                                       {txt}Root MSE      = {res} .02194
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0337857{col 26}{space 2} .0201812{col 37}{space 1}    1.67{col 46}{space 3}0.100{col 54}{space 4}-.0066926{col 67}{space 3} .0742641
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.0211525{col 26}{space 2} .0556605{col 37}{space 1}   -0.38{col 46}{space 3}0.705{col 54}{space 4}-.1327934{col 67}{space 3} .0904884
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7843511{col 26}{space 2}  .089287{col 37}{space 1}    8.78{col 46}{space 3}0.000{col 54}{space 4} .6052641{col 67}{space 3} .9634381
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0888562{col 26}{space 2} .0478888{col 37}{space 1}    1.86{col 46}{space 3}0.069{col 54}{space 4}-.0071966{col 67}{space 3}  .184909
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.549621{col 26}{space 2} .7593515{col 37}{space 1}    2.04{col 46}{space 3}0.046{col 54}{space 4} .0265544{col 67}{space 3} 3.072687
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth  stocks_petroleum_us_lag  trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      57
+                                                       {txt}F(  4,    52) ={res}  215.56
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9420
+                                                       {txt}Root MSE      = {res} .02196
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0375342{col 26}{space 2} .0204699{col 37}{space 1}    1.83{col 46}{space 3}0.072{col 54}{space 4}-.0035417{col 67}{space 3}   .07861
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .0193932{col 26}{space 2} .0784379{col 37}{space 1}    0.25{col 46}{space 3}0.806{col 54}{space 4}-.1380039{col 67}{space 3} .1767904
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7668054{col 26}{space 2} .0843587{col 37}{space 1}    9.09{col 46}{space 3}0.000{col 54}{space 4} .5975273{col 67}{space 3} .9360836
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0939938{col 26}{space 2} .0364283{col 37}{space 1}    2.58{col 46}{space 3}0.013{col 54}{space 4} .0208951{col 67}{space 3} .1670926
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1.57178{col 26}{space 2} .5681508{col 37}{space 1}    2.77{col 46}{space 3}0.008{col 54}{space 4} .4317024{col 67}{space 3} 2.711859
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1   ip_forecast stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  4,    53) ={res}  215.72
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9413
+                                                       {txt}Root MSE      = {res} .02193
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0409629{col 26}{space 2} .0210756{col 37}{space 1}    1.94{col 46}{space 3}0.057{col 54}{space 4}-.0013094{col 67}{space 3} .0832353
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .0541348{col 26}{space 2} .1303956{col 37}{space 1}    0.42{col 46}{space 3}0.680{col 54}{space 4}-.2074056{col 67}{space 3} .3156752
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7835247{col 26}{space 2} .0800039{col 37}{space 1}    9.79{col 46}{space 3}0.000{col 54}{space 4} .6230571{col 67}{space 3} .9439923
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0827643{col 26}{space 2} .0324945{col 37}{space 1}    2.55{col 46}{space 3}0.014{col 54}{space 4} .0175886{col 67}{space 3}   .14794
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.460615{col 26}{space 2} .5394944{col 37}{space 1}    2.71{col 46}{space 3}0.009{col 54}{space 4} .3785262{col 67}{space 3} 2.542704
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth  ip_forecast stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      57
+                                                       {txt}F(  5,    51) ={res}  170.04
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9421
+                                                       {txt}Root MSE      = {res} .02215
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0402128{col 26}{space 2} .0212212{col 37}{space 1}    1.89{col 46}{space 3}0.064{col 54}{space 4}-.0023905{col 67}{space 3} .0828162
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} -.037395{col 26}{space 2} .1586495{col 37}{space 1}   -0.24{col 46}{space 3}0.815{col 54}{space 4}-.3558972{col 67}{space 3} .2811071
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .1150567{col 26}{space 2} .2558884{col 37}{space 1}    0.45{col 46}{space 3}0.655{col 54}{space 4}-.3986607{col 67}{space 3} .6287742
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2}  .777057{col 26}{space 2} .0870862{col 37}{space 1}    8.92{col 46}{space 3}0.000{col 54}{space 4} .6022241{col 67}{space 3} .9518898
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0858579{col 26}{space 2} .0404307{col 37}{space 1}    2.12{col 46}{space 3}0.039{col 54}{space 4} .0046899{col 67}{space 3}  .167026
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.502615{col 26}{space 2} .5865844{col 37}{space 1}    2.56{col 46}{space 3}0.013{col 54}{space 4} .3249976{col 67}{space 3} 2.680232
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1  actual_ip_growth ip stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      57
+                                                       {txt}F(  5,    51) ={res}  169.90
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9420
+                                                       {txt}Root MSE      = {res} .02217
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0356609{col 26}{space 2} .0205694{col 37}{space 1}    1.73{col 46}{space 3}0.089{col 54}{space 4} -.005634{col 67}{space 3} .0769558
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2} .0247436{col 26}{space 2} .0832656{col 37}{space 1}    0.30{col 46}{space 3}0.768{col 54}{space 4} -.142419{col 67}{space 3} .1919063
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.0145544{col 26}{space 2} .0591331{col 37}{space 1}   -0.25{col 46}{space 3}0.807{col 54}{space 4} -.133269{col 67}{space 3} .1041602
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7593163{col 26}{space 2} .0992928{col 37}{space 1}    7.65{col 46}{space 3}0.000{col 54}{space 4} .5599778{col 67}{space 3} .9586549
+{txt}{space 7}trend {c |}{col 14}{res}{space 2}  .101957{col 26}{space 2} .0567777{col 37}{space 1}    1.80{col 46}{space 3}0.078{col 54}{space 4}-.0120289{col 67}{space 3} .2159429
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.686309{col 26}{space 2} .8484828{col 37}{space 1}    1.99{col 46}{space 3}0.052{col 54}{space 4}-.0170909{col 67}{space 3}  3.38971
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1 ip    ip_forecast stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      58
+                                                       {txt}F(  5,    52) ={res}  169.72
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9415
+                                                       {txt}Root MSE      = {res} .02211
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0371447{col 26}{space 2} .0211105{col 37}{space 1}    1.76{col 46}{space 3}0.084{col 54}{space 4}-.0052166{col 67}{space 3} .0795059
+{txt}{space 10}ip {c |}{col 14}{res}{space 2} -.029664{col 26}{space 2} .0594184{col 37}{space 1}   -0.50{col 46}{space 3}0.620{col 54}{space 4}-.1488958{col 67}{space 3} .0895678
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .0707347{col 26}{space 2} .1375323{col 37}{space 1}    0.51{col 46}{space 3}0.609{col 54}{space 4}-.2052441{col 67}{space 3} .3467134
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7696373{col 26}{space 2} .0927063{col 37}{space 1}    8.30{col 46}{space 3}0.000{col 54}{space 4} .5836085{col 67}{space 3} .9556661
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0979424{col 26}{space 2} .0517484{col 37}{space 1}    1.89{col 46}{space 3}0.064{col 54}{space 4}-.0058984{col 67}{space 3} .2017831
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.684698{col 26}{space 2} .8042046{col 37}{space 1}    2.09{col 46}{space 3}0.041{col 54}{space 4} .0709435{col 67}{space 3} 3.298453
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_us spec_var_1 ip actual_ip_growth   ip_forecast stocks_petroleum_us_lag trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      57
+                                                       {txt}F(  6,    50) ={res}  139.23
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9422
+                                                       {txt}Root MSE      = {res} .02236
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~s{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0384143{col 26}{space 2} .0208644{col 37}{space 1}    1.84{col 46}{space 3}0.072{col 54}{space 4} -.003493{col 67}{space 3} .0803217
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-.0135337{col 26}{space 2} .0592447{col 37}{space 1}   -0.23{col 46}{space 3}0.820{col 54}{space 4}-.1325302{col 67}{space 3} .1054628
+{txt}actual_ip_~h {c |}{col 14}{res}{space 2}-.0312196{col 26}{space 2} .1587499{col 37}{space 1}   -0.20{col 46}{space 3}0.845{col 54}{space 4}-.3500782{col 67}{space 3} .2876389
+{txt}{space 1}ip_forecast {c |}{col 14}{res}{space 2} .1126249{col 26}{space 2} .2571177{col 37}{space 1}    0.44{col 46}{space 3}0.663{col 54}{space 4}-.4038113{col 67}{space 3} .6290611
+{txt}stocks~s_lag {c |}{col 14}{res}{space 2} .7698764{col 26}{space 2} .1008898{col 37}{space 1}    7.63{col 46}{space 3}0.000{col 54}{space 4} .5672333{col 67}{space 3} .9725195
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0934346{col 26}{space 2} .0580227{col 37}{space 1}    1.61{col 46}{space 3}0.114{col 54}{space 4}-.0231076{col 67}{space 3} .2099767
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.610573{col 26}{space 2} .8497874{col 37}{space 1}    1.90{col 46}{space 3}0.064{col 54}{space 4}-.0962749{col 67}{space 3} 3.317422
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. **World Stocks
+. 
+. 
+. regress stocks_petroleum_world spec_var_1  igrec stocks_petroleum_world_lag   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      40
+                                                       {txt}F(  4,    35) ={res}   98.48
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8912
+                                                       {txt}Root MSE      = {res} .01275
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0434352{col 26}{space 2} .0216813{col 37}{space 1}    2.00{col 46}{space 3}0.053{col 54}{space 4}-.0005802{col 67}{space 3} .0874507
+{txt}{space 7}igrec {c |}{col 14}{res}{space 2} .0163075{col 26}{space 2} .0109277{col 37}{space 1}    1.49{col 46}{space 3}0.145{col 54}{space 4} -.005877{col 67}{space 3}  .038492
+{txt}stocks~d_lag {c |}{col 14}{res}{space 2} .5027566{col 26}{space 2} .1522625{col 37}{space 1}    3.30{col 46}{space 3}0.002{col 54}{space 4} .1936472{col 67}{space 3} .8118659
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0616992{col 26}{space 2} .0414665{col 37}{space 1}    1.49{col 46}{space 3}0.146{col 54}{space 4}-.0224822{col 67}{space 3} .1458805
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}   4.1112{col 26}{space 2} 1.251113{col 37}{space 1}    3.29{col 46}{space 3}0.002{col 54}{space 4} 1.571305{col 67}{space 3} 6.651095
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_world spec_var_1 igrec   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      42
+                                                       {txt}F(  3,    38) ={res}  106.90
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8660
+                                                       {txt}Root MSE      = {res} .01489
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0956877{col 26}{space 2} .0210201{col 37}{space 1}    4.55{col 46}{space 3}0.000{col 54}{space 4} .0531349{col 67}{space 3} .1382406
+{txt}{space 7}igrec {c |}{col 14}{res}{space 2} .0331248{col 26}{space 2} .0124616{col 37}{space 1}    2.66{col 46}{space 3}0.011{col 54}{space 4} .0078976{col 67}{space 3} .0583519
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .1501986{col 26}{space 2} .0307354{col 37}{space 1}    4.89{col 46}{space 3}0.000{col 54}{space 4}  .087978{col 67}{space 3} .2124191
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.253596{col 26}{space 2} .0138627{col 37}{space 1}  595.38{col 46}{space 3}0.000{col 54}{space 4} 8.225533{col 67}{space 3}  8.28166
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_world spec_var_1  igrec_quart stocks_petroleum_world_lag   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      40
+                                                       {txt}F(  4,    35) ={res}  104.71
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8938
+                                                       {txt}Root MSE      = {res}  .0126
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0505679{col 26}{space 2} .0234331{col 37}{space 1}    2.16{col 46}{space 3}0.038{col 54}{space 4} .0029961{col 67}{space 3} .0981397
+{txt}{space 1}igrec_quart {c |}{col 14}{res}{space 2} .0206238{col 26}{space 2} .0117075{col 37}{space 1}    1.76{col 46}{space 3}0.087{col 54}{space 4}-.0031438{col 67}{space 3} .0443913
+{txt}stocks~d_lag {c |}{col 14}{res}{space 2} .4966884{col 26}{space 2} .1506619{col 37}{space 1}    3.30{col 46}{space 3}0.002{col 54}{space 4} .1908285{col 67}{space 3} .8025484
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0565495{col 26}{space 2}  .041763{col 37}{space 1}    1.35{col 46}{space 3}0.184{col 54}{space 4}-.0282339{col 67}{space 3}  .141333
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.164236{col 26}{space 2} 1.237974{col 37}{space 1}    3.36{col 46}{space 3}0.002{col 54}{space 4} 1.651014{col 67}{space 3} 6.677458
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_world spec_var_1 igrec_quart   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      42
+                                                       {txt}F(  3,    38) ={res}  112.55
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8691
+                                                       {txt}Root MSE      = {res} .01471
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .1025836{col 26}{space 2} .0234284{col 37}{space 1}    4.38{col 46}{space 3}0.000{col 54}{space 4} .0551553{col 67}{space 3}  .150012
+{txt}{space 1}igrec_quart {c |}{col 14}{res}{space 2} .0369679{col 26}{space 2} .0132797{col 37}{space 1}    2.78{col 46}{space 3}0.008{col 54}{space 4} .0100845{col 67}{space 3} .0638512
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .1440907{col 26}{space 2} .0316839{col 37}{space 1}    4.55{col 46}{space 3}0.000{col 54}{space 4} .0799501{col 67}{space 3} .2082314
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  8.25678{col 26}{space 2} .0145475{col 37}{space 1}  567.57{col 46}{space 3}0.000{col 54}{space 4}  8.22733{col 67}{space 3}  8.28623
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_world spec_var_1  lnworld_real_gdp_quart stocks_petroleum_world_lag   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      40
+                                                       {txt}F(  4,    35) ={res}   94.19
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8894
+                                                       {txt}Root MSE      = {res} .01286
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0098945{col 26}{space 2} .0156916{col 37}{space 1}    0.63{col 46}{space 3}0.532{col 54}{space 4}-.0219611{col 67}{space 3} .0417501
+{txt}lnworld_re~t {c |}{col 14}{res}{space 2}-.0970138{col 26}{space 2} .0789609{col 37}{space 1}   -1.23{col 46}{space 3}0.227{col 54}{space 4} -.257313{col 67}{space 3} .0632853
+{txt}stocks~d_lag {c |}{col 14}{res}{space 2}  .639568{col 26}{space 2} .1594937{col 37}{space 1}    4.01{col 46}{space 3}0.000{col 54}{space 4} .3157786{col 67}{space 3} .9633574
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .1431308{col 26}{space 2} .0657323{col 37}{space 1}    2.18{col 46}{space 3}0.036{col 54}{space 4} .0096872{col 67}{space 3} .2765745
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.385643{col 26}{space 2} 1.214735{col 37}{space 1}    2.79{col 46}{space 3}0.009{col 54}{space 4} .9196004{col 67}{space 3} 5.851686
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. regress stocks_petroleum_world spec_var_1 lnworld_real_gdp_quart   trend,robust
+
+{txt}Linear regression                                      Number of obs ={res}      42
+                                                       {txt}F(  3,    38) ={res}   60.32
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8461
+                                                       {txt}Root MSE      = {res} .01595
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}stocks_pet~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}spec_var_1 {c |}{col 14}{res}{space 2} .0593479{col 26}{space 2} .0160124{col 37}{space 1}    3.71{col 46}{space 3}0.001{col 54}{space 4} .0269324{col 67}{space 3} .0917633
+{txt}lnworld_re~t {c |}{col 14}{res}{space 2}  .093143{col 26}{space 2} .0834332{col 37}{space 1}    1.12{col 46}{space 3}0.271{col 54}{space 4}-.0757587{col 67}{space 3} .2620447
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .1192119{col 26}{space 2}  .077513{col 37}{space 1}    1.54{col 46}{space 3}0.132{col 54}{space 4} -.037705{col 67}{space 3} .2761287
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 7.836377{col 26}{space 2}  .352805{col 37}{space 1}   22.21{col 46}{space 3}0.000{col 54}{space 4} 7.122161{col 67}{space 3} 8.550594
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. qui log close
+{smcl}
+{com}{sf}{ul off}

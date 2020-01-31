@@ -1,0 +1,425 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. 
+. *US stocks
+. 
+. reg lp lnrgdp_usa conv_imp_volat stocks_petroleum_us real_interest_rate rp trend ,robust
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   13.48
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8685
+                                                       {txt}Root MSE      = {res} .09778
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2}  2.80827{col 26}{space 2} 2.598255{col 37}{space 1}    1.08{col 46}{space 3}0.295{col 54}{space 4}-2.673569{col 67}{space 3} 8.290109
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} -2.48838{col 26}{space 2} 7.222159{col 37}{space 1}   -0.34{col 46}{space 3}0.735{col 54}{space 4} -17.7258{col 67}{space 3} 12.74904
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-2.635103{col 26}{space 2} 1.097801{col 37}{space 1}   -2.40{col 46}{space 3}0.028{col 54}{space 4}-4.951261{col 67}{space 3}-.3189446
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-4.451994{col 26}{space 2} 1.785712{col 37}{space 1}   -2.49{col 46}{space 3}0.023{col 54}{space 4}-8.219518{col 67}{space 3}-.6844708
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.166922{col 26}{space 2}  .330219{col 37}{space 1}    3.53{col 46}{space 3}0.003{col 54}{space 4} .4702205{col 67}{space 3} 1.863623
+{txt}{space 7}trend {c |}{col 14}{res}{space 2}  .012898{col 26}{space 2} .0098991{col 37}{space 1}    1.30{col 46}{space 3}0.210{col 54}{space 4}-.0079873{col 67}{space 3} .0337834
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-29.31329{col 26}{space 2} 46.23662{col 37}{space 1}   -0.63{col 46}{space 3}0.535{col 54}{space 4} -126.864{col 67}{space 3} 68.23745
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp lnrgdp_usa  conv_imp_volat stocks_petroleum_us real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  5,    18) ={res}   19.12
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8551
+                                                       {txt}Root MSE      = {res} .09974
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2} 6.204641{col 26}{space 2} 1.151743{col 37}{space 1}    5.39{col 46}{space 3}0.000{col 54}{space 4} 3.784918{col 67}{space 3} 8.624364
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} .9803271{col 26}{space 2} 6.097365{col 37}{space 1}    0.16{col 46}{space 3}0.874{col 54}{space 4}-11.82976{col 67}{space 3} 13.79042
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-1.494467{col 26}{space 2} .8747462{col 37}{space 1}   -1.71{col 46}{space 3}0.105{col 54}{space 4}-3.332241{col 67}{space 3} .3433062
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-5.683657{col 26}{space 2}  1.49317{col 37}{space 1}   -3.81{col 46}{space 3}0.001{col 54}{space 4}-8.820691{col 67}{space 3}-2.546624
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} .8860563{col 26}{space 2} .2500374{col 37}{space 1}    3.54{col 46}{space 3}0.002{col 54}{space 4} .3607472{col 67}{space 3} 1.411365
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-92.27855{col 26}{space 2} 20.23881{col 37}{space 1}   -4.56{col 46}{space 3}0.000{col 54}{space 4}-134.7987{col 67}{space 3}-49.75839
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp lnrgdp_usa volatility conv_imp_volat stocks_petroleum_us real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   19.67
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8602
+                                                       {txt}Root MSE      = {res} .10084
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2} 6.609536{col 26}{space 2} 1.523695{col 37}{space 1}    4.34{col 46}{space 3}0.000{col 54}{space 4} 3.394821{col 67}{space 3} 9.824252
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2}-7.478786{col 26}{space 2} 10.05118{col 37}{space 1}   -0.74{col 46}{space 3}0.467{col 54}{space 4}-28.68493{col 67}{space 3} 13.72736
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} 5.310993{col 26}{space 2} 6.589534{col 37}{space 1}    0.81{col 46}{space 3}0.431{col 54}{space 4}-8.591709{col 67}{space 3}  19.2137
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-1.799893{col 26}{space 2} .9789663{col 37}{space 1}   -1.84{col 46}{space 3}0.084{col 54}{space 4}-3.865331{col 67}{space 3} .2655454
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-5.596728{col 26}{space 2} 1.474282{col 37}{space 1}   -3.80{col 46}{space 3}0.001{col 54}{space 4}-8.707191{col 67}{space 3}-2.486264
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} .8091732{col 26}{space 2} .2528317{col 37}{space 1}    3.20{col 46}{space 3}0.005{col 54}{space 4} .2757449{col 67}{space 3} 1.342602
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-96.88454{col 26}{space 2} 24.19415{col 37}{space 1}   -4.00{col 46}{space 3}0.001{col 54}{space 4}-147.9297{col 67}{space 3}-45.83935
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. reg lp ip conv_imp_volat stocks_petroleum_us real_interest_rate rp trend ,robust
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   14.41
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8673
+                                                       {txt}Root MSE      = {res} .09823
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}ip {c |}{col 14}{res}{space 2} .8675096{col 26}{space 2}  .772511{col 37}{space 1}    1.12{col 46}{space 3}0.277{col 54}{space 4}-.7623461{col 67}{space 3} 2.497365
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-3.003732{col 26}{space 2} 6.410948{col 37}{space 1}   -0.47{col 46}{space 3}0.645{col 54}{space 4}-16.52965{col 67}{space 3} 10.52219
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-2.925652{col 26}{space 2} 1.048094{col 37}{space 1}   -2.79{col 46}{space 3}0.013{col 54}{space 4}-5.136936{col 67}{space 3}-.7143679
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-4.579387{col 26}{space 2} 1.856525{col 37}{space 1}   -2.47{col 46}{space 3}0.025{col 54}{space 4}-8.496313{col 67}{space 3}-.6624617
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.236764{col 26}{space 2} .2998427{col 37}{space 1}    4.12{col 46}{space 3}0.001{col 54}{space 4} .6041509{col 67}{space 3} 1.869376
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0190092{col 26}{space 2} .0055809{col 37}{space 1}    3.41{col 46}{space 3}0.003{col 54}{space 4} .0072345{col 67}{space 3} .0307839
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 14.41579{col 26}{space 2} 8.671855{col 37}{space 1}    1.66{col 46}{space 3}0.115{col 54}{space 4}-3.880223{col 67}{space 3} 32.71181
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp ip  conv_imp_volat stocks_petroleum_us real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  5,    18) ={res}   11.44
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.7742
+                                                       {txt}Root MSE      = {res} .12452
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}ip {c |}{col 14}{res}{space 2} 2.161131{col 26}{space 2} .9328869{col 37}{space 1}    2.32{col 46}{space 3}0.033{col 54}{space 4} .2012078{col 67}{space 3} 4.121053
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-.1454313{col 26}{space 2} 7.643908{col 37}{space 1}   -0.02{col 46}{space 3}0.985{col 54}{space 4}-16.20469{col 67}{space 3} 15.91382
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-1.574014{col 26}{space 2} 1.262111{col 37}{space 1}   -1.25{col 46}{space 3}0.228{col 54}{space 4} -4.22561{col 67}{space 3} 1.077583
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-9.108299{col 26}{space 2} 1.684405{col 37}{space 1}   -5.41{col 46}{space 3}0.000{col 54}{space 4} -12.6471{col 67}{space 3}-5.569496
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} .7855176{col 26}{space 2} .3463162{col 37}{space 1}    2.27{col 46}{space 3}0.036{col 54}{space 4} .0579342{col 67}{space 3} 1.513101
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .0781871{col 26}{space 2} 10.99119{col 37}{space 1}    0.01{col 46}{space 3}0.994{col 54}{space 4}-23.01345{col 67}{space 3} 23.16982
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp ip volatility conv_imp_volat stocks_petroleum_us real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   10.05
+                                                       {txt}Prob > F      = {res} 0.0001
+                                                       {txt}R-squared     = {res} 0.7742
+                                                       {txt}Root MSE      = {res} .12813
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}ip {c |}{col 14}{res}{space 2} 2.155477{col 26}{space 2} .9620189{col 37}{space 1}    2.24{col 46}{space 3}0.039{col 54}{space 4} .1257949{col 67}{space 3}  4.18516
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} .2926458{col 26}{space 2} 12.43858{col 37}{space 1}    0.02{col 46}{space 3}0.982{col 54}{space 4}-25.95047{col 67}{space 3} 26.53576
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-.3124189{col 26}{space 2} 7.872652{col 37}{space 1}   -0.04{col 46}{space 3}0.969{col 54}{space 4}-16.92226{col 67}{space 3} 16.29742
+{txt}stocks_pet~s {c |}{col 14}{res}{space 2}-1.561939{col 26}{space 2} 1.425258{col 37}{space 1}   -1.10{col 46}{space 3}0.288{col 54}{space 4} -4.56897{col 67}{space 3} 1.445093
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-9.102941{col 26}{space 2} 1.786436{col 37}{space 1}   -5.10{col 46}{space 3}0.000{col 54}{space 4}-12.87199{col 67}{space 3} -5.33389
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} .7887958{col 26}{space 2} .3309109{col 37}{space 1}    2.38{col 46}{space 3}0.029{col 54}{space 4}  .090635{col 67}{space 3} 1.486957
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .0237693{col 26}{space 2} 11.79623{col 37}{space 1}    0.00{col 46}{space 3}0.998{col 54}{space 4} -24.8641{col 67}{space 3} 24.91164
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. reg lp igrec conv_imp_volat stocks_petroleum_world real_interest_rate rp trend ,robust
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   13.48
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8042
+                                                       {txt}Root MSE      = {res} .11932
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}igrec {c |}{col 14}{res}{space 2}-.1072999{col 26}{space 2} .1582518{col 37}{space 1}   -0.68{col 46}{space 3}0.507{col 54}{space 4} -.441182{col 67}{space 3} .2265821
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} .1314175{col 26}{space 2} 8.529066{col 37}{space 1}    0.02{col 46}{space 3}0.988{col 54}{space 4}-17.86334{col 67}{space 3} 18.12617
+{txt}stocks_pet~d {c |}{col 14}{res}{space 2}-.3535182{col 26}{space 2} .3995382{col 37}{space 1}   -0.88{col 46}{space 3}0.389{col 54}{space 4} -1.19647{col 67}{space 3} .4894337
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-1.955915{col 26}{space 2} 1.683024{col 37}{space 1}   -1.16{col 46}{space 3}0.261{col 54}{space 4}-5.506785{col 67}{space 3} 1.594955
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.764427{col 26}{space 2} .3620342{col 37}{space 1}    4.87{col 46}{space 3}0.000{col 54}{space 4} 1.000602{col 67}{space 3} 2.528253
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0163974{col 26}{space 2} .0041174{col 37}{space 1}    3.98{col 46}{space 3}0.001{col 54}{space 4} .0077105{col 67}{space 3} .0250843
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.4235334{col 26}{space 2} 1.673729{col 37}{space 1}   -0.25{col 46}{space 3}0.803{col 54}{space 4}-3.954792{col 67}{space 3} 3.107725
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp igrec  conv_imp_volat stocks_petroleum_world real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  5,    18) ={res}    9.51
+                                                       {txt}Prob > F      = {res} 0.0001
+                                                       {txt}R-squared     = {res} 0.7365
+                                                       {txt}Root MSE      = {res} .13452
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}igrec {c |}{col 14}{res}{space 2}-.2689729{col 26}{space 2} .1771062{col 37}{space 1}   -1.52{col 46}{space 3}0.146{col 54}{space 4}-.6410592{col 67}{space 3} .1031134
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-2.834139{col 26}{space 2} 8.711242{col 37}{space 1}   -0.33{col 46}{space 3}0.749{col 54}{space 4}-21.13578{col 67}{space 3}  15.4675
+{txt}stocks_pet~d {c |}{col 14}{res}{space 2}-.3176203{col 26}{space 2}  .448368{col 37}{space 1}   -0.71{col 46}{space 3}0.488{col 54}{space 4}-1.259606{col 67}{space 3} .6243658
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-6.393549{col 26}{space 2} 1.415534{col 37}{space 1}   -4.52{col 46}{space 3}0.000{col 54}{space 4}-9.367477{col 67}{space 3}-3.419622
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.603472{col 26}{space 2} .4219975{col 37}{space 1}    3.80{col 46}{space 3}0.001{col 54}{space 4} .7168884{col 67}{space 3} 2.490056
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .497914{col 26}{space 2} 1.834158{col 37}{space 1}    0.27{col 46}{space 3}0.789{col 54}{space 4}-3.355509{col 67}{space 3} 4.351337
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lp igrec volatility conv_imp_volat stocks_petroleum_world real_interest_rate rp  ,robust 
+
+{txt}Linear regression                                      Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}    8.69
+                                                       {txt}Prob > F      = {res} 0.0002
+                                                       {txt}R-squared     = {res} 0.7453
+                                                       {txt}Root MSE      = {res} .13608
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}igrec {c |}{col 14}{res}{space 2}-.2614273{col 26}{space 2} .1943127{col 37}{space 1}   -1.35{col 46}{space 3}0.196{col 54}{space 4}-.6713912{col 67}{space 3} .1485367
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} 8.843295{col 26}{space 2} 11.36319{col 37}{space 1}    0.78{col 46}{space 3}0.447{col 54}{space 4}-15.13094{col 67}{space 3} 32.81753
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-8.233173{col 26}{space 2} 9.317443{col 37}{space 1}   -0.88{col 46}{space 3}0.389{col 54}{space 4}-27.89126{col 67}{space 3} 11.42491
+{txt}stocks_pet~d {c |}{col 14}{res}{space 2}-.2694233{col 26}{space 2} .4687448{col 37}{space 1}   -0.57{col 46}{space 3}0.573{col 54}{space 4}-1.258388{col 67}{space 3} .7195418
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-6.692265{col 26}{space 2} 1.447308{col 37}{space 1}   -4.62{col 46}{space 3}0.000{col 54}{space 4}-9.745818{col 67}{space 3}-3.638711
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.626155{col 26}{space 2} .4530701{col 37}{space 1}    3.59{col 46}{space 3}0.002{col 54}{space 4} .6702612{col 67}{space 3}  2.58205
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4186681{col 26}{space 2} 1.882819{col 37}{space 1}    0.22{col 46}{space 3}0.827{col 54}{space 4}-3.553732{col 67}{space 3} 4.391068
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. *IV
+. 
+. 
+. ivreg lp lnrgdp_usa conv_imp_volat  real_interest_rate rp trend (stocks_petroleum_us= stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  5,    17) ={res}       .
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8543
+                                                       {txt}Root MSE      = {res} .10294
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2}-.6507477{col 26}{space 2} 6.412582{col 37}{space 1}   -0.10{col 46}{space 3}0.920{col 54}{space 4}-14.18011{col 67}{space 3} 12.87862
+{txt}{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2} 5.389837{col 26}{space 2} 9.441346{col 37}{space 1}    0.57{col 46}{space 3}0.576{col 54}{space 4}-14.52966{col 67}{space 3} 25.30934
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} 2.555884{col 26}{space 2} 18.69592{col 37}{space 1}    0.14{col 46}{space 3}0.893{col 54}{space 4}-36.88906{col 67}{space 3} 42.00083
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-3.671003{col 26}{space 2} 2.097504{col 37}{space 1}   -1.75{col 46}{space 3}0.098{col 54}{space 4}-8.096351{col 67}{space 3}  .754344
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.161401{col 26}{space 2} .3651349{col 37}{space 1}    3.18{col 46}{space 3}0.005{col 54}{space 4} .3910336{col 67}{space 3} 1.931768
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0050064{col 26}{space 2} .0296713{col 37}{space 1}    0.17{col 46}{space 3}0.868{col 54}{space 4}-.0575945{col 67}{space 3} .0676073
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-85.14132{col 26}{space 2} 197.1611{col 37}{space 1}   -0.43{col 46}{space 3}0.671{col 54}{space 4}-501.1148{col 67}{space 3} 330.8322
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}lnrgdp_usa conv_imp_volat real_interest_rate rp trend stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp lnrgdp_usa  volatility  real_interest_rate rp trend (stocks_petroleum_us=oil_shock stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      30
+                                                       {txt}F(  6,    23) ={res}   58.83
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8928
+                                                       {txt}Root MSE      = {res} .09743
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2}-.0415376{col 26}{space 2} .7425272{col 37}{space 1}   -0.06{col 46}{space 3}0.956{col 54}{space 4}-1.577572{col 67}{space 3} 1.494497
+{txt}{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2}-7.876645{col 26}{space 2} 2.174167{col 37}{space 1}   -3.62{col 46}{space 3}0.001{col 54}{space 4}-12.37425{col 67}{space 3}-3.379038
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} 57.37992{col 26}{space 2} 22.87023{col 37}{space 1}    2.51{col 46}{space 3}0.020{col 54}{space 4} 10.06925{col 67}{space 3} 104.6906
+{txt}real_inter~e {c |}{col 14}{res}{space 2} 7.279949{col 26}{space 2} 2.507141{col 37}{space 1}    2.90{col 46}{space 3}0.008{col 54}{space 4} 2.093534{col 67}{space 3} 12.46636
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.346948{col 26}{space 2} .1134815{col 37}{space 1}   11.87{col 46}{space 3}0.000{col 54}{space 4} 1.112194{col 67}{space 3} 1.581702
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0753447{col 26}{space 2} .0205645{col 37}{space 1}    3.66{col 46}{space 3}0.001{col 54}{space 4} .0328037{col 67}{space 3} .1178857
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 123.9781{col 26}{space 2} 36.91525{col 37}{space 1}    3.36{col 46}{space 3}0.003{col 54}{space 4} 47.61312{col 67}{space 3} 200.3432
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}lnrgdp_usa volatility real_interest_rate rp trend oil_shock stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp lnrgdp_usa conv_imp_volat volatility  real_interest_rate rp trend (stocks_petroleum_us= stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  7,    16) ={res}   43.75
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8573
+                                                       {txt}Root MSE      = {res}   .105
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2}-.7996746{col 26}{space 2}  6.77742{col 37}{space 1}   -0.12{col 46}{space 3}0.908{col 54}{space 4}-15.16716{col 67}{space 3} 13.56781
+{txt}{space 2}lnrgdp_usa {c |}{col 14}{res}{space 2} 5.677507{col 26}{space 2} 9.345691{col 37}{space 1}    0.61{col 46}{space 3}0.552{col 54}{space 4}-14.13447{col 67}{space 3} 25.48949
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} 4.492897{col 26}{space 2} 16.95069{col 37}{space 1}    0.27{col 46}{space 3}0.794{col 54}{space 4}-31.44097{col 67}{space 3} 40.42676
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2}-3.337145{col 26}{space 2} 9.509852{col 37}{space 1}   -0.35{col 46}{space 3}0.730{col 54}{space 4}-23.49713{col 67}{space 3} 16.82284
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-3.745669{col 26}{space 2} 2.141867{col 37}{space 1}   -1.75{col 46}{space 3}0.099{col 54}{space 4}-8.286224{col 67}{space 3} .7948868
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.109205{col 26}{space 2} .3476534{col 37}{space 1}    3.19{col 46}{space 3}0.006{col 54}{space 4} .3722128{col 67}{space 3} 1.846197
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0045169{col 26}{space 2}  .029824{col 37}{space 1}    0.15{col 46}{space 3}0.882{col 54}{space 4}-.0587071{col 67}{space 3} .0677409
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-88.83383{col 26}{space 2}  197.724{col 37}{space 1}   -0.45{col 46}{space 3}0.659{col 54}{space 4}  -507.99{col 67}{space 3} 330.3224
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}lnrgdp_usa conv_imp_volat volatility real_interest_rate rp trend stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. 
+. ivreg lp ip conv_imp_volat  real_interest_rate rp trend (stocks_petroleum_us= stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}   21.89
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8654
+                                                       {txt}Root MSE      = {res} .09893
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2}-2.272514{col 26}{space 2} 2.930242{col 37}{space 1}   -0.78{col 46}{space 3}0.449{col 54}{space 4}-8.454784{col 67}{space 3} 3.909756
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}  1.12756{col 26}{space 2} 1.364194{col 37}{space 1}    0.83{col 46}{space 3}0.420{col 54}{space 4}-1.750639{col 67}{space 3} 4.005758
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-1.337397{col 26}{space 2} 9.869646{col 37}{space 1}   -0.14{col 46}{space 3}0.894{col 54}{space 4}-22.16053{col 67}{space 3} 19.48574
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-4.277304{col 26}{space 2} 1.753096{col 37}{space 1}   -2.44{col 46}{space 3}0.026{col 54}{space 4}-7.976012{col 67}{space 3}-.5785954
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.268508{col 26}{space 2} .3848586{col 37}{space 1}    3.30{col 46}{space 3}0.004{col 54}{space 4}  .456527{col 67}{space 3} 2.080488
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0182094{col 26}{space 2} .0065512{col 37}{space 1}    2.78{col 46}{space 3}0.013{col 54}{space 4} .0043875{col 67}{space 3} .0320313
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.668308{col 26}{space 2} 25.72698{col 37}{space 1}    0.34{col 46}{space 3}0.740{col 54}{space 4}-45.61087{col 67}{space 3} 62.94749
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}ip conv_imp_volat real_interest_rate rp trend stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp ip  volatility  real_interest_rate rp trend (stocks_petroleum_us=oil_shock stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      30
+                                                       {txt}F(  6,    23) ={res}   72.68
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.9121
+                                                       {txt}Root MSE      = {res} .08824
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2} .4223241{col 26}{space 2} .6569224{col 37}{space 1}    0.64{col 46}{space 3}0.527{col 54}{space 4}-.9366235{col 67}{space 3} 1.781272
+{txt}{space 10}ip {c |}{col 14}{res}{space 2}-3.250978{col 26}{space 2} .7043045{col 37}{space 1}   -4.62{col 46}{space 3}0.000{col 54}{space 4}-4.707943{col 67}{space 3}-1.794013
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} 55.65302{col 26}{space 2} 23.35471{col 37}{space 1}    2.38{col 46}{space 3}0.026{col 54}{space 4} 7.340132{col 67}{space 3} 103.9659
+{txt}real_inter~e {c |}{col 14}{res}{space 2} 8.115293{col 26}{space 2} 2.317841{col 37}{space 1}    3.50{col 46}{space 3}0.002{col 54}{space 4} 3.320474{col 67}{space 3} 12.91011
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.329014{col 26}{space 2} .1070722{col 37}{space 1}   12.41{col 46}{space 3}0.000{col 54}{space 4} 1.107519{col 67}{space 3}  1.55051
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0318256{col 26}{space 2} .0075616{col 37}{space 1}    4.21{col 46}{space 3}0.000{col 54}{space 4} .0161832{col 67}{space 3}  .047468
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.706626{col 26}{space 2}  6.13157{col 37}{space 1}    1.42{col 46}{space 3}0.169{col 54}{space 4}-3.977492{col 67}{space 3} 21.39074
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}ip volatility real_interest_rate rp trend oil_shock stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp ip  conv_imp_volat volatility  real_interest_rate rp trend (stocks_petroleum_us= stocks_petroleum_us_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  7,    16) ={res}   21.63
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.8662
+                                                       {txt}Root MSE      = {res} .10168
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~s {c |}{col 14}{res}{space 2} -2.39591{col 26}{space 2} 3.719132{col 37}{space 1}   -0.64{col 46}{space 3}0.529{col 54}{space 4}-10.28012{col 67}{space 3} 5.488299
+{txt}{space 10}ip {c |}{col 14}{res}{space 2} 1.117417{col 26}{space 2} 1.449613{col 37}{space 1}    0.77{col 46}{space 3}0.452{col 54}{space 4}-1.955625{col 67}{space 3} 4.190459
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-.8680951{col 26}{space 2} 8.254074{col 37}{space 1}   -0.11{col 46}{space 3}0.918{col 54}{space 4}-18.36595{col 67}{space 3} 16.62976
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2}-1.157383{col 26}{space 2} 10.81413{col 37}{space 1}   -0.11{col 46}{space 3}0.916{col 54}{space 4}-24.08231{col 67}{space 3} 21.76754
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-4.317213{col 26}{space 2} 1.810405{col 37}{space 1}   -2.38{col 46}{space 3}0.030{col 54}{space 4}-8.155101{col 67}{space 3}-.4793255
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.253497{col 26}{space 2} .4277515{col 37}{space 1}    2.93{col 46}{space 3}0.010{col 54}{space 4} .3467047{col 67}{space 3}  2.16029
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0183568{col 26}{space 2} .0077222{col 37}{space 1}    2.38{col 46}{space 3}0.030{col 54}{space 4} .0019863{col 67}{space 3} .0347272
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 9.556853{col 26}{space 2} 31.48657{col 37}{space 1}    0.30{col 46}{space 3}0.765{col 54}{space 4}-57.19169{col 67}{space 3} 76.30539
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_us{p_end}
+{p 0 15 99}Instruments:{space 3}ip conv_imp_volat volatility real_interest_rate rp trend stocks_petroleum_us_lag{p_end}
+{hline 78}
+
+{com}. 
+. ivreg lp igrec conv_imp_volat real_interest_rate rp trend (stocks_petroleum_world= stocks_petroleum_world_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  6,    17) ={res}    9.93
+                                                       {txt}Prob > F      = {res} 0.0001
+                                                       {txt}R-squared     = {res} 0.7243
+                                                       {txt}Root MSE      = {res} .14159
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~d {c |}{col 14}{res}{space 2}-1.523203{col 26}{space 2} .9724937{col 37}{space 1}   -1.57{col 46}{space 3}0.136{col 54}{space 4}-3.574986{col 67}{space 3} .5285789
+{txt}{space 7}igrec {c |}{col 14}{res}{space 2}-.0213502{col 26}{space 2} .1741168{col 37}{space 1}   -0.12{col 46}{space 3}0.904{col 54}{space 4}-.3887046{col 67}{space 3} .3460041
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2} .8427003{col 26}{space 2} 8.617453{col 37}{space 1}    0.10{col 46}{space 3}0.923{col 54}{space 4}-17.33854{col 67}{space 3} 19.02394
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-3.086381{col 26}{space 2} 1.984596{col 37}{space 1}   -1.56{col 46}{space 3}0.138{col 54}{space 4}-7.273513{col 67}{space 3} 1.100751
+{txt}{space 10}rp {c |}{col 14}{res}{space 2}   1.2417{col 26}{space 2} .4866319{col 37}{space 1}    2.55{col 46}{space 3}0.021{col 54}{space 4} .2149969{col 67}{space 3} 2.268404
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0169913{col 26}{space 2} .0071409{col 37}{space 1}    2.38{col 46}{space 3}0.029{col 54}{space 4} .0019253{col 67}{space 3} .0320572
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.421219{col 26}{space 2} 3.832639{col 37}{space 1}    1.15{col 46}{space 3}0.265{col 54}{space 4}-3.664942{col 67}{space 3} 12.50738
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_world{p_end}
+{p 0 15 99}Instruments:{space 3}igrec conv_imp_volat real_interest_rate rp trend stocks_petroleum_world_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp igrec volatility real_interest_rate rp trend (stocks_petroleum_world=oil_shock stocks_petroleum_world_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      12
+                                                       {txt}F(  6,     5) ={res}   10.43
+                                                       {txt}Prob > F      = {res} 0.0105
+                                                       {txt}R-squared     = {res} 0.9206
+                                                       {txt}Root MSE      = {res} .08234
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~d {c |}{col 14}{res}{space 2}-.7699739{col 26}{space 2}   1.6289{col 37}{space 1}   -0.47{col 46}{space 3}0.656{col 54}{space 4}-4.957194{col 67}{space 3} 3.417246
+{txt}{space 7}igrec {c |}{col 14}{res}{space 2} .2222425{col 26}{space 2} .3370314{col 37}{space 1}    0.66{col 46}{space 3}0.539{col 54}{space 4}-.6441242{col 67}{space 3} 1.088609
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} 20.60422{col 26}{space 2} 38.40677{col 37}{space 1}    0.54{col 46}{space 3}0.615{col 54}{space 4}-78.12353{col 67}{space 3}  119.332
+{txt}real_inter~e {c |}{col 14}{res}{space 2} 4.174435{col 26}{space 2} 3.581582{col 37}{space 1}    1.17{col 46}{space 3}0.296{col 54}{space 4}-5.032316{col 67}{space 3} 13.38119
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} .7708405{col 26}{space 2} .3865598{col 37}{space 1}    1.99{col 46}{space 3}0.103{col 54}{space 4}-.2228431{col 67}{space 3} 1.764524
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0263865{col 26}{space 2} .0278919{col 37}{space 1}    0.95{col 46}{space 3}0.388{col 54}{space 4}-.0453118{col 67}{space 3} .0980848
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2193659{col 26}{space 2}  5.63028{col 37}{space 1}    0.04{col 46}{space 3}0.970{col 54}{space 4}-14.25373{col 67}{space 3} 14.69246
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_world{p_end}
+{p 0 15 99}Instruments:{space 3}igrec volatility real_interest_rate rp trend oil_shock stocks_petroleum_world_lag{p_end}
+{hline 78}
+
+{com}. ivreg lp igrec conv_imp_volat volatility  real_interest_rate rp trend (stocks_petroleum_world= stocks_petroleum_world_lag) ,robust
+
+{txt}Instrumental variables (2SLS) regression               Number of obs ={res}      24
+                                                       {txt}F(  7,    16) ={res}   10.17
+                                                       {txt}Prob > F      = {res} 0.0001
+                                                       {txt}R-squared     = {res} 0.7475
+                                                       {txt}Root MSE      = {res} .13967
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}          lp{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+stocks_pet~d {c |}{col 14}{res}{space 2}-1.359978{col 26}{space 2} .8774215{col 37}{space 1}   -1.55{col 46}{space 3}0.141{col 54}{space 4}-3.220028{col 67}{space 3} .5000726
+{txt}{space 7}igrec {c |}{col 14}{res}{space 2}-.0290831{col 26}{space 2} .1713961{col 37}{space 1}   -0.17{col 46}{space 3}0.867{col 54}{space 4}-.3924266{col 67}{space 3} .3342603
+{txt}conv_imp_v~t {c |}{col 14}{res}{space 2}-2.105178{col 26}{space 2} 8.862832{col 37}{space 1}   -0.24{col 46}{space 3}0.815{col 54}{space 4}-20.89354{col 67}{space 3} 16.68319
+{txt}{space 2}volatility {c |}{col 14}{res}{space 2} 4.643754{col 26}{space 2} 10.24784{col 37}{space 1}    0.45{col 46}{space 3}0.657{col 54}{space 4}-17.08071{col 67}{space 3} 26.36821
+{txt}real_inter~e {c |}{col 14}{res}{space 2}-3.153846{col 26}{space 2} 1.934258{col 37}{space 1}   -1.63{col 46}{space 3}0.123{col 54}{space 4}-7.254289{col 67}{space 3} .9465966
+{txt}{space 10}rp {c |}{col 14}{res}{space 2} 1.313509{col 26}{space 2} .4383226{col 37}{space 1}    3.00{col 46}{space 3}0.009{col 54}{space 4} .3843064{col 67}{space 3} 2.242711
+{txt}{space 7}trend {c |}{col 14}{res}{space 2} .0167605{col 26}{space 2} .0065454{col 37}{space 1}    2.56{col 46}{space 3}0.021{col 54}{space 4} .0028848{col 67}{space 3} .0306361
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.818869{col 26}{space 2} 3.452622{col 37}{space 1}    1.11{col 46}{space 3}0.285{col 54}{space 4}-3.500363{col 67}{space 3}  11.1381
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 99}Instrumented:{space 2}stocks_petroleum_world{p_end}
+{p 0 15 99}Instruments:{space 3}igrec conv_imp_volat volatility real_interest_rate rp trend stocks_petroleum_world_lag{p_end}
+{hline 78}
+
+{com}. 
+. 
+. qui log close
+{smcl}
+{com}{sf}{ul off}

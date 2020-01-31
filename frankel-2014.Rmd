@@ -1,0 +1,51 @@
+---
+title: "Frankel-replicate"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 50)
+```
+
+## Table 4a in JIMF 2014
+
+```{r}
+#install.packages("foreign")
+#install.packages("stargazer")
+#install.packages("tidyverse")
+#install.packages("broom")
+#install.packages("lemon")
+library(foreign)
+library(stargazer)
+library(tidyverse)
+library(broom)
+library(lemon)
+knit_print.data.frame <- lemon_print
+
+mydata <- read.dta("data-frankel/Appendix NoCE/Individual Commodities Dataset.dta")
+
+mydata %>%
+  group_by(commodity) %>%
+  mutate(trend = year - 1983) %>%
+  do(tidy(lm(log(sp) ~ real_int_gdpcpi + lnrgdp_world + linvent + spread + sdsp_lag + trend, data = ., na.action = na.omit))) %>% 
+ print.data.frame()
+
+
+
+
+```
+
+```{r}
+mydata_PriceEquation <- read.dta("data-frankel/Appendix NoCE/Price Equation Dataset.dta")
+mydata_InventoryEquation <- read.dta("data-frankel/Appendix NoCE/Price Equation Dataset.dta")
+
+
+
+
+
+```
+
+
