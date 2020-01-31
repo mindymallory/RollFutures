@@ -5,7 +5,7 @@ output:
   html_document: default
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message= FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 options(scipen = 50)
 ```
@@ -17,13 +17,12 @@ options(scipen = 50)
 #install.packages("stargazer")
 #install.packages("tidyverse")
 #install.packages("broom")
-#install.packages("lemon")
+
 library(foreign)
 library(stargazer)
 library(tidyverse)
 library(broom)
-library(lemon)
-knit_print.data.frame <- lemon_print
+
 
 mydata <- read.dta("data-frankel/Appendix NoCE/Individual Commodities Dataset.dta")
 
