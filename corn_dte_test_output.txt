@@ -1,0 +1,90 @@
+Loading required package: zoo
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+Loaded: data-download/H2013.csv 
+Loaded: data-download/K2013.csv 
+Loaded: data-download/N2013.csv 
+Loaded: data-download/U2013.csv 
+Loaded: data-download/Z2013.csv 
+Loaded: data-download/H2014.csv 
+Loaded: data-download/K2014.csv 
+Loaded: data-download/N2014.csv 
+Loaded: data-download/U2014.csv 
+Loaded: data-download/Z2014.csv 
+Loaded: data-download/H2015.csv 
+Loaded: data-download/K2015.csv 
+Loaded: data-download/N2015.csv 
+Loaded: data-download/U2015.csv 
+Loaded: data-download/Z2015.csv 
+Loaded: data-download/H2016.csv 
+Loaded: data-download/K2016.csv 
+Loaded: data-download/N2016.csv 
+Loaded: data-download/U2016.csv 
+Loaded: data-download/Z2016.csv 
+
+Data loaded successfully. Dimensions: 997 60 
+
+Starting DTE-based roll with initial contract: H-2013 
+Expiration date: 2013-03-14 
+Will roll 5 days before expiration
+
+Rolling from H-2013 to K-2013 on 2013-03-11 ( 3 days before expiration)
+Rolling from K-2013 to N-2013 on 2013-05-09 ( 5 days before expiration)
+Rolling from N-2013 to U-2013 on 2013-07-09 ( 5 days before expiration)
+Rolling from U-2013 to Z-2013 on 2013-09-09 ( 5 days before expiration)
+Rolling from Z-2013 to H-2014 on 2013-12-09 ( 5 days before expiration)
+Rolling from H-2014 to K-2014 on 2014-03-10 ( 4 days before expiration)
+Rolling from K-2014 to N-2014 on 2014-05-09 ( 5 days before expiration)
+Rolling from N-2014 to U-2014 on 2014-07-09 ( 5 days before expiration)
+Rolling from U-2014 to Z-2014 on 2014-09-09 ( 5 days before expiration)
+Rolling from Z-2014 to H-2015 on 2014-12-09 ( 5 days before expiration)
+Rolling from H-2015 to K-2015 on 2015-03-09 ( 5 days before expiration)
+Rolling from K-2015 to N-2015 on 2015-05-11 ( 3 days before expiration)
+Rolling from N-2015 to U-2015 on 2015-07-09 ( 5 days before expiration)
+Rolling from U-2015 to Z-2015 on 2015-09-09 ( 5 days before expiration)
+Rolling from Z-2015 to H-2016 on 2015-12-09 ( 5 days before expiration)
+Rolling from H-2016 to K-2016 on 2016-03-09 ( 5 days before expiration)
+Rolling from K-2016 to N-2016 on 2016-05-09 ( 5 days before expiration)
+Rolling from N-2016 to U-2016 on 2016-07-11 ( 3 days before expiration)
+Rolling from U-2016 to Z-2016 on 2016-09-09 ( 5 days before expiration)
+
+Generating plot...
+Warning message:
+Removed 4 rows containing missing values (`geom_line()`). 
+
+Exported data to: C_Nearby_dte.csv 
+
+Summary of nearby series:
+  C_Nearby_dte  
+ Min.   :301.5  
+ 1st Qu.:362.0  
+ Median :385.8  
+ Mean   :432.6  
+ 3rd Qu.:455.8  
+ Max.   :740.5  
+ NA's   :4      
+
+First few rows:
+           C_Nearby_dte
+2013-01-02       690.75
+2013-01-03       689.25
+2013-01-04       680.25
+2013-01-07       685.50
+2013-01-08       688.75
+2013-01-09       694.25
+
+Last few rows:
+           C_Nearby_dte
+2016-12-07        350.5
+2016-12-08        346.5
+2016-12-09           NA
+2016-12-12           NA
+2016-12-13           NA
+2016-12-14           NA
+
+DTE Test complete!
